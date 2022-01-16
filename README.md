@@ -4,6 +4,6 @@
 - **Description:** Version of node-exporter to be install
 - **Default:** `1.3.1`
 
-`node_expoter_use_localhost`
+`node_exporter_listen_localhost`
 - **Description:** have node exporter listen on localhost only
 - **Default:** `false`
