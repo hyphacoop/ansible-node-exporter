@@ -1,4 +1,14 @@
 ---
+- name: Set Listen IP
+  set_fact:
+    node_exporter_listen_ip: "127.0.0.1"
+  when: node_exporter_use_localhost == true
+
+- name: Set Listen IP
+  set_fact:
+    node_exporter_listen_ip: "[:::]"
+  when: node_exporter_use_localhost == false
+
 - name: Create node_exporter group
   group:
     name: node_exporter
