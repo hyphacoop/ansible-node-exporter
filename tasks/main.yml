@@ -6,7 +6,7 @@
 
 - name: Set Listen IP
   set_fact:
-    node_exporter_listen_ip: "[:::]"
+    node_exporter_listen_ip: "[::]"
   when: node_exporter_listen_localhost == false
 
 - name: Create node_exporter group
