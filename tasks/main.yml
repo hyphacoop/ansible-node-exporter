@@ -26,7 +26,7 @@
 
 - name: Download Node Exporter
   unarchive:
-    src: "{{ node_exporeter_binary }}"
+    src: "{{ node_exporter_binary }}"
     dest: /opt/
     remote_src: yes
 
