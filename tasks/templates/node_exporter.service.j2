@@ -1,8 +1,15 @@
 [Unit]
 Description=Node Exporter
+After=network.target
 
 [Service]
+Type=simple
 User=node_exporter
+Group=node_exporter
+Restart=on-failure
+RestartSec=10
+StartLimitInterval=60
+Environment=GOMAXPROCS=1
 ExecStart=/opt/node_exporter/node_exporter --web.listen-address={{ node_exporter_listen_ip }}:9100 --collector.systemd --collector.textfile.directory="/opt/node_exporter/textfiles"
 
 [Install]

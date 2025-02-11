@@ -1,7 +1,7 @@
 # ansible-node-exporter
 
 `node_exporter_version` 
-- **Description:** Version of node-exporter to be install
+- **Description:** Version of node-exporter to be installed
 - **Default:** `1.3.1`
 
 `node_exporter_listen_localhost`
